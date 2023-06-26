@@ -1,9 +1,14 @@
-import "./App.css";
+
+// import Header from "./component/Header";
+import Homepage from "./component/Homepage";
+
 
 function App() {
   return (
     <>
-      <h1>hello QMS Team</h1>
+      <Homepage />
+      {/* <Header/> */}
+      
     </>
   );
 }
