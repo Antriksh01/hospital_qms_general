@@ -1,19 +1,33 @@
 import React from "react";
-import Admindashboard from "./Admindashboard";
-// import DispalyContent from "./DispalyContent";
+import Tokengenerated from "./Tokengenerated";
+// import Frontpage from "./Frontpage";
+// import Displayscreen from "./Displayscreen";
+// import Managereceptionist from "./Managereceptionist";
+// import Managedoctor from "./Managedoctor";
+// import Admindashboard from "./Admindashboard";
+// import DisplayContent from "./Displaycontent";
 // import Doctordashboard from "./Doctordashboard";
 // import Registerapatient from "./Registerapatient";
 // import Dashboard from "./Dashboard";
-// import Report from "./Report";
+// import Reports from "./Reports";
+// import DoctorTreatment from "./Doctortreatment";
+
 const Homepage = () => {
   return (
 <>
   {/* <Registerapatient /> */}
   {/* <Doctordashboard/> */}
-  {/* <DispalyContent/> */}
-  {/* <Report/> */}
+
+  {/* <Reports/> */}
   {/* <Dashboard/> */}
-  <Admindashboard/>
+  {/* <Admindashboard/> */}
+  {/* <DisplayContent/> */}
+  {/* <Managedoctor/> */}
+  {/* <Managereceptionist/> */}
+  {/* <DoctorTreatment/> */}
+  {/* <Displayscreen/> */}
+  {/* <Frontpage/> */}
+  <Tokengenerated/>
   </>
   )
   
