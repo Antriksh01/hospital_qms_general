@@ -1,5 +1,5 @@
 import React from "react";
-import Tokengenerated from "./Tokengenerated";
+// import Tokengenerated from "./Tokengenerated";
 // import Frontpage from "./Frontpage";
 // import Displayscreen from "./Displayscreen";
 // import Managereceptionist from "./Managereceptionist";
@@ -11,6 +11,8 @@ import Tokengenerated from "./Tokengenerated";
 // import Dashboard from "./Dashboard";
 // import Reports from "./Reports";
 // import DoctorTreatment from "./Doctortreatment";
+
+
 
 const Homepage = () => {
   return (
@@ -27,7 +29,8 @@ const Homepage = () => {
   {/* <DoctorTreatment/> */}
   {/* <Displayscreen/> */}
   {/* <Frontpage/> */}
-  <Tokengenerated/>
+  {/* <Tokengenerated/> */}
+  {/* <Registerpage/> */}
   </>
   )
   
