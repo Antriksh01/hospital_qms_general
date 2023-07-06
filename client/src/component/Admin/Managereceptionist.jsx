@@ -1,8 +1,8 @@
 import React from 'react'
-import Headers from './Header'
+import Headers from '../Header'
 import styled from 'styled-components'
 
-function Managedoctor() {
+function Managereceptionist() {
   return (
     
     <> 
@@ -10,7 +10,7 @@ function Managedoctor() {
     <div>
       <Headers/>
       <Heading className="title">
-        <span>Manage Doctors</span>
+        <span>Manage Receptionist</span>
       </Heading>
     <Responsive><table className="table my-5 ">
   <thead>
@@ -21,6 +21,7 @@ function Managedoctor() {
       <th scope="col">Working Day</th>
       <th scope="col">Off Day</th>
       <th scope="col">Additional Notes</th>
+      <th scope="col">Assigned Counter</th>
       <th scope="col">Actions</th>
     
     </tr>
@@ -33,7 +34,7 @@ function Managedoctor() {
       <td>Mon-Sat</td>
       <td>Sunday</td>
       <td>Available on Call 24 X 7</td>
-      
+      <td>1</td>
       <td>Edit/Remove</td>
     </tr>
     <tr>
@@ -43,7 +44,7 @@ function Managedoctor() {
       <td>Mon-Sat</td>
       <td>Sunday</td>
       <td>Available on Call 24 X 7</td>
-    
+      <td>2</td>
       <td>Edit/Remove</td>
     </tr>
     <tr>
@@ -53,6 +54,7 @@ function Managedoctor() {
       <td>Mon-Sat</td>
       <td>Sunday</td>
       <td>Available on Call 24 X 7</td>
+      <td>3</td>
       <td>Edit/Remove</td>
     </tr>
   </tbody>
@@ -60,7 +62,7 @@ function Managedoctor() {
 </Responsive>
    <Button className="btu">
      <button className='btu1'>
-      Add a doctor</button> 
+      Add a Receptionist</button> 
      
      <button className='btu2'>Go to Dashboard</button> 
  
@@ -73,7 +75,7 @@ function Managedoctor() {
   )
 }
 
-export default Managedoctor
+export default Managereceptionist
 
 const Responsive = styled.div`
   overflow-x: auto;

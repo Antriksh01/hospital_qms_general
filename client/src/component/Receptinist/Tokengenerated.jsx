@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from './logo.png'
-import Header from './Header'
+import logo from '../assets/image/logo.png'
+import Header from '../Header'
 
 export default function Tokengenerated() {
   return (

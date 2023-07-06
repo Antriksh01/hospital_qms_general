@@ -1,62 +1,107 @@
-import React from "react";
-import styled from "styled-components";
-import Headers from "./Header";
-function Doctordashboard() {
+import React from 'react'
+import styled from 'styled-components'
+import Header from '../component/Header';
+
+function Admindashboard() {
   return (
     <>
-      <Headers />
-
-      <Heading className="title">
-        <span>Doctor`s Dashboard</span>
+    <Header/>
+    <Heading className="title">
+        <span>Admin Dashboard</span>
       </Heading>
       <Wrapper className="container">
         <div></div>
 
         <div className="hamburgers">
           <div>
-            <button className="buttons">start your day</button>
+            <button className="buttons">Manage Doctors</button>
           </div>
           <div>
-            <button className="buttons">wrap the day</button>
+            <button className="buttons">Manage Receptionist</button>
           </div>
           <div>
-            <button className="buttons">my profile</button>
+            <button className="buttons">Manage Departmants</button>
           </div>
           <div>
-            <button className="buttons">report to admin</button>
+            <button className="buttons">Manage Counters</button>
           </div>
         </div>
         <div id="cardcan" className="cardcan">
           <div className="row">
             <div className="col-md-4">
               <div className="card  d-flex justify-content-center align-items-center">
-                <h4>Assigned Patient</h4>
+                <h4>Doctors</h4>
                 <h4>15</h4>
               </div>
             </div>
             <div className="col-md-4">
               <div className="card  d-flex justify-content-center align-items-center ">
-                <h4>Served</h4>
+                <h4>Departments</h4>
                 <h4>8</h4>
               </div>
             </div>
             <div className="col-md-4">
               <div className="card  d-flex justify-content-center align-items-center">
-                <h4>Patient Treated Yesterday</h4>
+                <h4>Patient Today</h4>
                 <h4>65</h4>
               </div>
             </div>
             <div className="col-md-4">
               <div className="card d-flex justify-content-center align-items-center">
-                <h4>Missed</h4>
+                <h4>Receptionist Concerns</h4>
                 <h4>5</h4>
               </div>
             </div>
             <div className="col-md-4">
               <div className="card  d-flex justify-content-center align-items-center">
-                <h4>Your Reports</h4>
+                <h4>Served</h4>
+                <h4>5</h4>
               </div>
             </div>
+            <div className="col-md-4">
+              <div className="card  d-flex justify-content-center align-items-center">
+                <h4>Unattended</h4>
+                <h4>5</h4>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="card  d-flex justify-content-center align-items-center">
+                <h4>Cancelled OPD</h4>
+                <h4>5</h4>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="card  d-flex justify-content-center align-items-center">
+                <h4>Display Concerms</h4>
+                <h4>5</h4>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="card  d-flex justify-content-center align-items-center">
+                <h4>Reports</h4>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="card  d-flex justify-content-center align-items-center">
+                <h4>Display Content</h4>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="card  d-flex justify-content-center align-items-center">
+                <h4>Token Format</h4>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="card  d-flex justify-content-center align-items-center">
+                <h4>Monitor Doctors Logs</h4>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="card  d-flex justify-content-center align-items-center">
+                <h4>Monitor Receptionist Logs</h4>
+              </div>
+            </div>
+            
           </div>
 
           {/* <div className="card">
@@ -69,11 +114,11 @@ function Doctordashboard() {
   );
 }
 
-export default Doctordashboard;
+export default Admindashboard
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: -10px;
+  margin-top: -20px;
   margin-left: 12px;
 
   @media (max-width: 768px) {
@@ -81,8 +126,6 @@ const Wrapper = styled.div`
     text-align: center;
     /* flex-wrap: wrap; */
   }
-  
-
 
  
 
@@ -122,15 +165,13 @@ const Wrapper = styled.div`
     background-color: rgb(179, 255, 179);
     margin-top: 10px;
     margin-right: 2rem;
-    height: 25rem;
+    height: 52rem;
 
     @media (max-width: 768px) {
       width: 100%;
+      height: 30rem;
       
     }
-  }
-  .container{
-  
   }
 `;
 const Heading = styled.div`
@@ -147,3 +188,8 @@ const Heading = styled.div`
     font-size: 35px;
   }
 `;
+
+    
+    
+    
+

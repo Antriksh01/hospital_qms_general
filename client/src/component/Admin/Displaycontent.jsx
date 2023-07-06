@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from "styled-components"
-import Header from './Header'
-const Displayscreen = () => {
+import Header from '../Header'
+const DisplayContent = () => {
     return (
       <div>
         <Header/>
         <div>
         <div className="text-center" id="heading">
           <h1 className="fw-bold mt-4" style={{ color: "#347571" }}>
-            Display Screen
+            Display Content
           </h1>
         </div>
         <TableParent className="mt-5">
@@ -156,7 +156,7 @@ const Displayscreen = () => {
     )
   }
   
-  export default Displayscreen
+  export default DisplayContent
   const TableParent = styled.div`
   @media screen and (max-width: 767px){
     overflow-x: auto !important;

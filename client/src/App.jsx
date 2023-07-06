@@ -1,17 +1,10 @@
-
-// import Header from "./component/Header";
-import Homepage from "./component/Homepage";
-// import Tokengenerated from "./component/Tokengenerated";
-// import Registerpage from "./component/Registerpage";
+import Frontpage from "./pages/Frontpage";
 
 
 function App() {
   return (
     <>
-      <Homepage />
-      {/* <Header/> */}
-      {/* <Registerpage/> */}
-      {/* <Tokengenerated/> */}
+     <Frontpage/>
     </>
   );
 }

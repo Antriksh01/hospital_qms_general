@@ -1,6 +1,6 @@
 import React from "react";
-import  jbplogo from './jbplogo.png';
-import  jbpHospital from './jbpHospital.jpg';
+import  jbplogo from '../assets/images/jbplogo.png';
+import  jbpHospital from '../assets/images/jbpHospital.jpg';
 import styled from 'styled-components'
 
 
