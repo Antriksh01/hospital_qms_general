@@ -1,4 +1,5 @@
 import React from "react";
+import Registerpage from "./Registerpage";
 // import Tokengenerated from "./Tokengenerated";
 // import Frontpage from "./Frontpage";
 // import Displayscreen from "./Displayscreen";
@@ -11,6 +12,7 @@ import React from "react";
 // import Dashboard from "./Dashboard";
 // import Reports from "./Reports";
 // import DoctorTreatment from "./Doctortreatment";
+
 
 
 
@@ -31,6 +33,7 @@ const Homepage = () => {
   {/* <Frontpage/> */}
   {/* <Tokengenerated/> */}
   {/* <Registerpage/> */}
+  <Registerpage/>
   </>
   )
   
