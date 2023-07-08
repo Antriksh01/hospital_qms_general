@@ -154,10 +154,10 @@ const Wrapper = styled.div`
    text-align: center;
    margin-bottom: 35px;
    color: rgba(34, 146, 58, 0.83);
-   @media (max-width: 768px) {
+   @media  screen and(max-width: 768px) {
     text-align: center;
-    margin-top: 20px;
-    font-size: 36px;
+    margin-top: 30px;
+    font-size: 2.5rem;
     
     
    }
@@ -199,13 +199,13 @@ const Wrapper = styled.div`
     margin-right: 12px;
     width: 870px;
     
-    @media (min-width: 1380px) {
+    @media screen and (min-width: 1380px) {
       margin-top: -9.5rem;
       width: 100%
     
     
     }
-    @media (max-width: 768px) {
+    @media screen and (max-width: 768px) {
      margin: 1px;
       width: 100%;
       
@@ -224,12 +224,9 @@ const Wrapper = styled.div`
     padding: 12px;
     width: 300px;
     margin: 15px;
-    @media (max-width: 768px) {
-     margin: auto;
-      width: 100%;
+    @media  screen and (max-width: 768px) {
       
-    
-    
+      margin-right: 3rem;
     }
     
   `;

@@ -1,12 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
-import Header from '../component/Header';
+import React from "react";
+import styled from "styled-components";
+import Header from "../component/Header";
+import { Link } from "react-router-dom";
 
 function Admindashboard() {
   return (
     <>
-    <Header/>
-    <Heading className="title">
+      <Header />
+      <Heading className="title">
         <span>Admin Dashboard</span>
       </Heading>
       <Wrapper className="container">
@@ -14,10 +15,10 @@ function Admindashboard() {
 
         <div className="hamburgers">
           <div>
-            <button className="buttons">Manage Doctors</button>
+           <Link to="/manage-doctor"><button className="buttons">Manage Doctors</button></Link> 
           </div>
           <div>
-            <button className="buttons">Manage Receptionist</button>
+           <Link to= "/manage-receptionist"> <button className="buttons">Manage Receptionist</button></Link>
           </div>
           <div>
             <button className="buttons">Manage Departmants</button>
@@ -101,7 +102,6 @@ function Admindashboard() {
                 <h4>Monitor Receptionist Logs</h4>
               </div>
             </div>
-            
           </div>
 
           {/* <div className="card">
@@ -114,20 +114,17 @@ function Admindashboard() {
   );
 }
 
-export default Admindashboard
+export default Admindashboard;
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: -20px;
   margin-left: 12px;
 
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
     text-align: center;
-    /* flex-wrap: wrap; */
   }
-
- 
 
   .card {
     width: 200px;
@@ -140,11 +137,16 @@ const Wrapper = styled.div`
     margin-left: 90px;
     text-align: center;
 
-    @media (max-width: 768px) {
-    
+    @media screen and (max-width: 768px) {
       transition: font-size 0.3s ease-in-out;
       width: 90%;
       margin: 12px;
+    }
+  }
+  .cardcan {
+    @media screen and (max-width: 768px) {
+      margin-top: 2rem;
+      margin-right: 1rem;
     }
   }
 
@@ -167,29 +169,22 @@ const Wrapper = styled.div`
     margin-right: 2rem;
     height: 52rem;
 
-    @media (max-width: 768px) {
-      width: 100%;
-      height: 30rem;
-      
+    @media screen and (max-width: 768px) {
+      width: 93%;
+      height: 27rem;
     }
   }
 `;
 const Heading = styled.div`
   font-size: 3rem;
-
   transition: font-size 0.3s ease-in-out;
   font-weight: bolder;
   text-align: center;
   margin-bottom: 35px;
   color: rgba(34, 146, 58, 0.83);
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     text-align: center;
     margin-top: 20px;
     font-size: 35px;
   }
 `;
-
-    
-    
-    
-

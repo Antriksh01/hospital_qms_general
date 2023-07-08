@@ -97,10 +97,10 @@ const Heading = styled.div`
   text-align: center;
   margin-bottom: 35px;
   color: rgba(34, 146, 58, 0.83);
-  @media (max-width: 768px) {
+  @media  screen and (max-width: 768px) {
     text-align: center;
-    margin-top: 20px;
-    font-size: 35px;
+    margin-top: 30px;
+    font-size: 2.5rem;
   }
 `;
 const Button = styled.div`

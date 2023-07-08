@@ -100,6 +100,9 @@ const Heading = styled.div`
     margin-top: 20px;
     font-size: 35px;
   }
+  /* .title{
+    
+  } */
 `;
 const Button = styled.div`
   text-align  :center ;

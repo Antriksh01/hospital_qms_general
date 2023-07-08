@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Header from '../component/Header';
+import { Link } from 'react-router-dom';
 
 function Dashboard() {
   return (
@@ -14,7 +15,7 @@ function Dashboard() {
 
         <div className="hamburgers">
           <div>
-            <button className="buttons">Register a Patient</button>
+            <Link to="/register-patient"><button className="buttons">Register a Patient</button></Link>
           </div>
           <div>
             <button className="buttons">Canel Registration</button>
@@ -122,6 +123,12 @@ const Wrapper = styled.div`
       margin: 12px;
     }
   }
+  .cardcan {
+    @media screen and (max-width: 768px) {
+      margin-top: 2rem;
+      margin-right: 1rem;
+    }
+  }
 
   .buttons {
     background-color: rgba(32, 143, 56, 0.83);
@@ -143,7 +150,7 @@ const Wrapper = styled.div`
     height: 31rem;
 
     @media (max-width: 768px) {
-      width: 100%;
+      width: 95%;
       
     }
   }

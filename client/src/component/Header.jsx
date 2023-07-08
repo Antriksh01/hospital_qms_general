@@ -1,6 +1,8 @@
 import React from 'react'
-import jbplogo from './jbplogo.png';
+import jbplogo from '../assets/images/jbplogo.png';
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
+
 
 function Header() {
   return (
@@ -11,12 +13,12 @@ function Header() {
       <img src={jbplogo} alt="Logo" />
     </div>
   
-    <div id="links" className="links">
+    <div className="links">
      
       <h3>Hi Admin Name </h3>
       <h3>Employee Id</h3>
       <span Id="btu">
-       <button >Logout</button>
+       <button > <Link to='/' style={{textDecoration: 'none' ,color:'white'}}>Logout</Link></button>
       <button>Go to Home</button></span>
      
     </div>
@@ -75,8 +77,11 @@ const Wrapper = styled.div`
    @media (max-width: 768px) {
     text-align: center;
     margin-top: 40px;
+    margin-left: 1rem;
+    margin-top: 2rem;
     
    }
+   
 
    
  }
@@ -88,7 +93,8 @@ const Wrapper = styled.div`
   color: white;
   font-weight: bold;
   background-color:rgba(34, 146, 58, 0.83); 
-  @media (max-width: 768px) {
+ 
+  @media  screen and (max-width: 768px) {
   
     margin-top: 40px;
     margin: auto;
@@ -102,6 +108,7 @@ const Wrapper = styled.div`
    }
    
  }
+ 
  
 `;
 

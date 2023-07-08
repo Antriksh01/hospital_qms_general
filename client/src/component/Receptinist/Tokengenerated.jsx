@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/image/logo.png'
+import jbplogoremove from '../../assets/images/jbplogoremove.png'
 import Header from '../Header'
 
 export default function Tokengenerated() {
@@ -16,7 +16,7 @@ export default function Tokengenerated() {
               >
                 <img
                   className="py-3"
-                  src={logo}
+                  src={jbplogoremove}
                   alt="avatar"
                   style={{ width: "300px" }}
                 />

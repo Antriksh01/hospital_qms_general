@@ -79,7 +79,7 @@ const Wrapper = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     text-align: center;
-    /* flex-wrap: wrap; */
+    margin-left: 0rem;
   }
   
 
@@ -104,6 +104,12 @@ const Wrapper = styled.div`
       margin: 12px;
     }
   }
+  .cardcan {
+    @media screen and (max-width: 768px) {
+      margin-top: 2rem;
+      margin-right: 0.5rem;
+    }
+  }
 
   .buttons {
     background-color: rgba(32, 143, 56, 0.83);
@@ -125,8 +131,9 @@ const Wrapper = styled.div`
     height: 25rem;
 
     @media (max-width: 768px) {
-      width: 100%;
-      
+      width: 93%;
+      margin-left: 0.5rem;
+ 
     }
   }
   .container{
@@ -143,7 +150,7 @@ const Heading = styled.div`
   color: rgba(34, 146, 58, 0.83);
   @media (max-width: 768px) {
     text-align: center;
-    margin-top: 20px;
-    font-size: 35px;
+    margin-top: 2rem;
+    font-size: 2.5rem;
   }
 `;
