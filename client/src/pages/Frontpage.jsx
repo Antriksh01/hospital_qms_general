@@ -117,7 +117,7 @@ const Container = styled.header`
   .login {
     margin-top: 3rem;
     width: 23rem;
-    margin-left: 8rem;
+    margin-left: 5rem;
     height: 27rem;
     box-shadow: 10px 10px 5px #dedfdf;
     @media  screen and (max-width: 768px) {
