@@ -1,7 +1,17 @@
 import React from 'react'
 import styled from "styled-components"
 import Header from './Header'
+import { useState, useEffect } from "react"
+import axios from "axios"
 const DisplayContent = () => {
+  const [myData, setMyData] = useState([]);
+
+  // using Promises
+  useEffect(() => {
+    axios
+      .get("http://localhost:4500/api/join")
+      .then((response) => setMyData(response.data))
+  }, []);
     return (
       <div>
         <Header/>
@@ -35,39 +45,44 @@ const DisplayContent = () => {
               </div>
             </div>
             <div className="col-2">
-              <div className="py-2" style={{ backgroundColor: "#b8e28a" }}>
+              <div className="py-4" style={{ backgroundColor: "#b8e28a" }}>
                 <h3>Time of Appointment</h3>
               </div>
             </div>
           </div>
+          {myData.map((post) => {
+          const { Token, DoctorName,Dept, RoomNo, Time} = post;
+          return(
           <div className="row mt-3 mx-3" style={{}}>
             <div className="col-3">
               <div className="py-4" style={{ backgroundColor: "#ecf8e5" }}>
-                <h5>Orth_010123_01</h5>
+                <h5>{Token}</h5>
               </div>
             </div>
             <div className="col-3">
               <div className="py-4" style={{ backgroundColor: "#ecf8e5" }}>
-                <h5>ANESTHESIOLOGY</h5>
+                <h5>{Dept}</h5>
               </div>
             </div>
             <div className="col-2">
               <div className="py-4" style={{ backgroundColor: "#ecf8e5" }}>
-                <h5>Doctor Name</h5>
+                <h5>{DoctorName}</h5>
               </div>
             </div>
             <div className="col-2">
               <div className="py-4" style={{ backgroundColor: "#ecf8e5" }}>
-                <h5>01</h5>
+                <h5>{RoomNo}</h5>
               </div>
             </div>
             <div className="col-2">
               <div className="py-4" style={{ backgroundColor: "#ecf8e5" }}>
-                <h5>11:00</h5>
+                <h5>{Time}</h5>
               </div>
             </div>
           </div>
-          <div className="row mt-3 mx-3" style={{}}>
+          )
+        })}
+          {/* <div className="row mt-3 mx-3" style={{}}>
             <div className="col-3">
               <div className="py-4" style={{ backgroundColor: "#ecf8e5" }}>
                 <h5>Orth_010123_02</h5>
@@ -147,7 +162,7 @@ const DisplayContent = () => {
                 <h5>12:00</h5>
               </div>
             </div>
-          </div>
+          </div> */}
          </TableContainer>
         </TableParent>
         

@@ -1,11 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import logo from './logo.png';
+import logo from "./logo.png";
+import { useContext } from "react";
+import { AuthContext } from "./AuthContext";
 
 const DoctorTreatment = () => {
+  const { formData } = useContext(AuthContext);
+  const { username, email } = formData;
+  console.log(formData,"1");
   return (
     <div>
-      <div className="mb-5" style={{ color: "#347571", textAlign: "center",marginTop:"2.5rem" }}>
+      <p>Username: {username}</p>
+      <p>Email: {email}</p>
+      <div
+        className="mb-5"
+        style={{ color: "#347571", textAlign: "center", marginTop: "2.5rem" }}
+      >
         <h1>Doctor's Treatment</h1>
       </div>
       <div
