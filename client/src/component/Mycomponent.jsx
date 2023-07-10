@@ -1,19 +1,24 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const  MyComponent = () => {
+const MyComponent = () => {
   const [myData, setMyData] = useState([]);
 
   // using Promises
   useEffect(() => {
     axios
       .get("http://localhost:4500/api/join")
-      .then((response) => setMyData(response.data))
+      .then((response) => setMyData(response.data));
   }, []);
 
-//plz subscribe to thapa technical
+  //plz subscribe to thapa technical
+  const { formData } = useContext(AuthContext);
+  const { username, email } = formData;
+  console.log(formData, "1");
   return (
     <>
+      <p>Username: {username}</p>
+      <p>Email: {email}</p>
       <h1>Jabalpur Hospital</h1>
 
       <div className="grid">
@@ -21,7 +26,7 @@ const  MyComponent = () => {
           const { Token, DoctorName, RoomNo, Time } = post;
           return (
             <div className="card">
-              <h2>{DoctorName}</h2>            
+              <h2>{DoctorName}</h2>
               <h2>{RoomNo}</h2>
               <p>{Time}</p>
               <p>{Token}</p>
@@ -34,21 +39,6 @@ const  MyComponent = () => {
 };
 
 export default MyComponent;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import React from 'react';
 // import { useEffect } from 'react';
@@ -70,6 +60,6 @@ export default MyComponent;
 //     }
 //   };
 
-//   return 
+//   return
 // }
 // export default MyComponent;

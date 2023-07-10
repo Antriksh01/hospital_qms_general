@@ -34,9 +34,14 @@ const Registerpage = () => {
     //     alert("Sign up successful");
     //     navigate("/Login");
   };
+  const { formData } = useContext(AuthContext);
+  const { username, email } = formData;
+  console.log(formData, "1");
 
   return (
     <>
+      <p>Username: {username}</p>
+      <p>Email: {email}</p>
       {/* <Header />*/}
       <h1 id="adm1">Sign up</h1>
       <form className="form" onSubmit={handleClick}>

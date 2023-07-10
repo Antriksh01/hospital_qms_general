@@ -1,12 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
-import Header from './Header';
+import React from "react";
+import styled from "styled-components";
+import Header from "./Header";
 
 function Dashboard() {
+  const { formData } = useContext(AuthContext);
+  const { username, email } = formData;
+  console.log(formData, "1");
   return (
     <>
-    <Header/>
-    <Heading className="title">
+      <p>Username: {username}</p>
+      <p>Email: {email}</p>
+      <Header />
+      <Heading className="title">
         <span>Dashboard</span>
       </Heading>
       <Wrapper className="container">
@@ -89,7 +94,7 @@ function Dashboard() {
   );
 }
 
-export default Dashboard
+export default Dashboard;
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -101,8 +106,6 @@ const Wrapper = styled.div`
     text-align: center;
     /* flex-wrap: wrap; */
   }
-
- 
 
   .card {
     width: 200px;
@@ -116,7 +119,6 @@ const Wrapper = styled.div`
     text-align: center;
 
     @media (max-width: 768px) {
-    
       transition: font-size 0.3s ease-in-out;
       width: 90%;
       margin: 12px;
@@ -144,7 +146,6 @@ const Wrapper = styled.div`
 
     @media (max-width: 768px) {
       width: 100%;
-      
     }
   }
 `;
@@ -162,8 +163,3 @@ const Heading = styled.div`
     font-size: 35px;
   }
 `;
-
-    
-    
-    
-

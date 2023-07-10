@@ -1,6 +1,5 @@
 import express from "express";
 import cors from "cors";
-// import mysql from "mysql";
 import authRoutes from "./routes/auth.js";
 const app = express();
 
@@ -14,7 +13,7 @@ app.use(
   })
 );
 
-app.use("/auth/api", authRoutes);
+app.use("/api/auth", authRoutes);
 
 app.listen(5000, () => {
   console.log("Server started on port 5000");

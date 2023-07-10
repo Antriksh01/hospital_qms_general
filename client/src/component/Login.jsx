@@ -27,7 +27,7 @@ const Login = (props) => {
     } else if (formData.password.length < 6) {
       validationErrors.password = "Password must be at least 6 characters long";
     }
-
+    updateFormData("");
     return validationErrors;
   };
 

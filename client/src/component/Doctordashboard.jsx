@@ -2,8 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import Headers from "./Header";
 function Doctordashboard() {
+  const { formData } = useContext(AuthContext);
+  const { username, email } = formData;
+  console.log(formData,"1");
   return (
     <>
+    <p>Username: {username}</p>
+      <p>Email: {email}</p>
       <Headers />
 
       <Heading className="title">

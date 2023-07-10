@@ -1,93 +1,90 @@
-import React from 'react'
-import Headers from './Header'
-import styled from 'styled-components'
+import React from "react";
+import Headers from "./Header";
+import styled from "styled-components";
 
 function Managereceptionist() {
+  const { formData } = useContext(AuthContext);
+  const { username, email } = formData;
+  console.log(formData, "1");
   return (
-    
-    <> 
-    
-    <div>
-      <Headers/>
-      <Heading className="title">
-        <span>Manage Receptionist</span>
-      </Heading>
-    <Responsive><table className="table my-5 ">
-  <thead>
-    <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Name</th>
-      <th scope="col">Contact</th>
-      <th scope="col">Working Day</th>
-      <th scope="col">Off Day</th>
-      <th scope="col">Additional Notes</th>
-      <th scope="col">Assigned Counter</th>
-      <th scope="col">Actions</th>
-    
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Receptionist Name 1</td>
-      <td>999999999</td>
-      <td>Mon-Sat</td>
-      <td>Sunday</td>
-      <td>Available on Call 24 X 7</td>
-      <td>1</td>
-      <td>Edit/Remove</td>
-    </tr>
-    <tr>
-    <th scope="row">2</th>
-      <td>Receptionist Name 2</td>
-      <td>999999999</td>
-      <td>Mon-Sat</td>
-      <td>Sunday</td>
-      <td>Available on Call 24 X 7</td>
-      <td>2</td>
-      <td>Edit/Remove</td>
-    </tr>
-    <tr>
-    <th scope="row">3</th>
-      <td>Receptionist Name 3</td>
-      <td>999999999</td>
-      <td>Mon-Sat</td>
-      <td>Sunday</td>
-      <td>Available on Call 24 X 7</td>
-      <td>3</td>
-      <td>Edit/Remove</td>
-    </tr>
-  </tbody>
-</table>
-</Responsive>
-   <Button className="btu">
-     <button className='btu1'>
-      Add a Receptionist</button> 
-     
-     <button className='btu2'>Go to Dashboard</button> 
- 
-   </Button>
-    
-    </div>
-    
-    
+    <>
+      <p>Username: {username}</p>
+      <p>Email: {email}</p>
+      <div>
+        <Headers />
+        <Heading className="title">
+          <span>Manage Receptionist</span>
+        </Heading>
+        <Responsive>
+          <table className="table my-5 ">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Contact</th>
+                <th scope="col">Working Day</th>
+                <th scope="col">Off Day</th>
+                <th scope="col">Additional Notes</th>
+                <th scope="col">Assigned Counter</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Receptionist Name 1</td>
+                <td>999999999</td>
+                <td>Mon-Sat</td>
+                <td>Sunday</td>
+                <td>Available on Call 24 X 7</td>
+                <td>1</td>
+                <td>Edit/Remove</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Receptionist Name 2</td>
+                <td>999999999</td>
+                <td>Mon-Sat</td>
+                <td>Sunday</td>
+                <td>Available on Call 24 X 7</td>
+                <td>2</td>
+                <td>Edit/Remove</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Receptionist Name 3</td>
+                <td>999999999</td>
+                <td>Mon-Sat</td>
+                <td>Sunday</td>
+                <td>Available on Call 24 X 7</td>
+                <td>3</td>
+                <td>Edit/Remove</td>
+              </tr>
+            </tbody>
+          </table>
+        </Responsive>
+        <Button className="btu">
+          <button className="btu1">Add a Receptionist</button>
+
+          <button className="btu2">Go to Dashboard</button>
+        </Button>
+      </div>
     </>
-  )
+  );
 }
 
-export default Managereceptionist
+export default Managereceptionist;
 
 const Responsive = styled.div`
   overflow-x: auto;
-    margin: 0.5rem;
-    .table th,
+  margin: 0.5rem;
+  .table th,
   .table td {
     border: 1px solid black;
     padding: 2.5rem;
     text-align: center;
-    
   }
-`
+`;
 
 const Heading = styled.div`
   font-size: 3rem;
@@ -104,53 +101,45 @@ const Heading = styled.div`
   }
 `;
 const Button = styled.div`
-  text-align  :center ;
+  text-align: center;
   flex-wrap: wrap;
-  
-  
-  .btu1{
-    
-    margin-bottom: 2rem; 
+
+  .btu1 {
+    margin-bottom: 2rem;
     padding: 13px;
     width: 12rem;
     border-radius: 2rem;
-    background-color:  rgba(34, 146, 58, 0.83);
-    
-   font-weight: bold;
-   color: white;
-   
-  @media (max-width: 768px) {
-  
-  margin-top: 40px;
-  margin: auto;
-  margin-top: 30px;
-  margin-right: 32px;
+    background-color: rgba(34, 146, 58, 0.83);
 
-  justify-content: center;
- }
-  
+    font-weight: bold;
+    color: white;
+
+    @media (max-width: 768px) {
+      margin-top: 40px;
+      margin: auto;
+      margin-top: 30px;
+      margin-right: 32px;
+
+      justify-content: center;
+    }
   }
-  .btu2{
+  .btu2 {
     padding: 13px;
-  
+
     width: 12rem;
     margin-left: 20rem;
     border-radius: 2rem;
-    background-color:   rgba(34, 146, 58, 0.83);
+    background-color: rgba(34, 146, 58, 0.83);
     font-weight: bold;
-   
-  color: white;
- 
-  @media (max-width: 768px) {
-  
-  margin-top: 40px;
-  margin: auto;
-  margin-top: 30px;
-  margin-right: 32px;
-  justify-content: center;
-  
- }
 
+    color: white;
+
+    @media (max-width: 768px) {
+      margin-top: 40px;
+      margin: auto;
+      margin-top: 30px;
+      margin-right: 32px;
+      justify-content: center;
+    }
   }
- 
-`
+`;
